@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatta Events</title>
 
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -13,20 +14,16 @@
 
     <!-- ================= NAVBAR ================= -->
     <header class="fixed top-0 left-0 w-full z-50 bg-white">
-        <div class="relative px-4 sm:px-6 lg:px-10
- py-4 flex items-center justify-between">
+        <div class="relative px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between">
 
             <!-- LEFT : LOGO -->
-            <div class="flex items-center gap-3">
-                <a href="/index.html">
-                    <img src="/assets/Logo.png" alt="Logo" class="w-28 sm:w-32 md:w-36 lg:w-40 mt-1 sm:mt-0" />
-
-                </a>
-            </div>
+            <a href="/index.html">
+                <img src="/assets/Logo.png" alt="Logo" class="w-28 sm:w-32 md:w-36 lg:w-40 mt-[2px] sm:mt-0" />
+            </a>
 
             <!-- CENTER : MENU -->
             <nav id="desktopMenu" class="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-10 text-lg font-medium
-             transition-all duration-500 ease-out">
+               transition-all duration-500 ease-out">
                 <a href="#" class="text-[#D53F52]">Home</a>
                 <a href="#" class="hover:text-[#D53F52]">About</a>
                 <a href="#" class="hover:text-[#D53F52]">Service</a>
@@ -55,17 +52,22 @@
         </div>
     </header>
 
-    <!-- ================= HERO VIDEO ================= -->
-    <section class="pt-28 -mt-5   px-4 sm:px-6 lg:px-10
-">
-        <div class="relative h-[50vh]  mx-auto rounded-3xl overflow-hidden">
+    <!-- ===== NAVBAR SPACER (KEY FIX) ===== -->
+    <div class="h-[64px] sm:h-[72px] md:h-[92px]"></div>
 
+    <!-- ================= HERO VIDEO ================= -->
+    <section class="px-4 sm:px-6 lg:px-10">
+        <div class="relative h-[50vh] rounded-3xl overflow-hidden">
+
+            <!-- VIDEO -->
             <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
                 <source src="/assets/Banner video.mp4" type="video/mp4">
             </video>
 
+            <!-- OVERLAY -->
             <div class="absolute inset-0 bg-black/40"></div>
 
+            <!-- CONTENT -->
             <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-6">
                 <h1 class="text-4xl md:text-6xl font-semibold">Elegant. Local</h1>
                 <p class="mt-3 text-lg md:text-xl">
