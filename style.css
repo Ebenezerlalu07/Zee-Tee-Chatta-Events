@@ -32,7 +32,7 @@ body {
     font-family: "Borel", cursive;
 }
 
-.active{
+.active {
     color: #d53f52;
 }
 
@@ -60,6 +60,84 @@ body {
         transform: translateY(0);
     }
 }
+
+
+.typing-text {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+
+    /* reveal */
+    animation: reveal 1.6s ease-out forwards;
+
+    /* subtle cursor */
+    padding-right: 10px;
+}
+
+.typing-text::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 2px;
+    background: currentColor;
+    animation: blink 1s ease-in-out infinite;
+}
+
+/* smooth reveal */
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* cursor blink */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+.gradient-text {
+    background: linear-gradient(120deg,
+            #000000,
+            #D53F52,
+            #960417,
+            #6C0496,
+            #000000);
+    background-size: 400% 400%;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: gradientFlow 7s ease-in-out infinite;
+}
+
+/* Smooth loop */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 
 
