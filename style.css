@@ -1,0 +1,55 @@
+/* =========================
+   FONT IMPORTS
+========================= */
+
+/* Borel Regular (Google Font) */
+@import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   GLOBAL FONT
+========================= */
+
+html,
+body {
+    font-family: "Gill Sans MT", "Gill Sans", Calibri, Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+
+/* =========================
+   SPAN FONT
+========================= */
+
+span {
+    font-family: "Borel", cursive;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}

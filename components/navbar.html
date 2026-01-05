@@ -1,0 +1,48 @@
+<header class="w-full border-b bg-white">
+    <div class=" px-10 py-4 flex items-center justify-between">
+
+        <!-- LOGO -->
+        <div class="flex items-center gap-4">
+            <img src="/assets/logo.png" class="w-40" alt="Zee Tee" />
+        </div>
+
+        <!-- NAV -->
+        <nav id="desktopNav" class="hidden md:flex gap-10 text-lg font-medium transition-all duration-500 ease-out">
+            <a href="#" class="text-red-500">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <!-- HAMBURGER -->
+        <button id="hamburgerBtn" class="flex flex-col gap-1.5" aria-label="Menu">
+            <span class="w-6 h-[2px] bg-black"></span>
+            <span class="w-6 h-[2px] bg-black"></span>
+            <span class="w-6 h-[2px] bg-black"></span>
+        </button>
+    </div>
+</header>
+
+<script>
+    // 🔥 Runs AFTER navbar is injected
+    (() => {
+        const btn = document.getElementById("hamburgerBtn");
+        const nav = document.getElementById("desktopNav");
+
+        if (!btn || !nav) return;
+
+        let open = false;
+
+        btn.addEventListener("click", () => {
+            open = !open;
+
+            nav.classList.toggle("opacity-0", open);
+            nav.classList.toggle("translate-x-8", open);
+            nav.classList.toggle("pointer-events-none", open);
+        });
+    })();
+</script>
+
+
+
