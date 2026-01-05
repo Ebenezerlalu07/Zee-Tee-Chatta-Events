@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
 
 
 </head>
@@ -137,13 +139,13 @@
                     </div>
                 </div>
 
-                <p class="text-gray-700 leading-relaxed mb-4 max-w-xl text-sm sm:text-base">
+                <p class=" leading-relaxed mb-4 max-w-xl text-sm sm:text-base">
                     <span class="font-medium">Your Go-To Event Venue in Chattanooga</span><br />
                     ZT - Chatta Events is a family-owned, budget-friendly indoor event venue in Chattanooga,
                     created to make celebrations beautiful and stress free.
                 </p>
 
-                <p class="text-gray-700 leading-relaxed max-w-xl text-sm sm:text-base">
+                <p class=" leading-relaxed max-w-xl text-sm sm:text-base">
                     Inspired by the scenic charm of Chattanooga, our naturally elegant space is perfect
                     for birthdays, weddings, showers, and private events - without breaking the budget.
                 </p>
@@ -184,20 +186,134 @@
     <section>
         <div class="text-center py-5 font-['Borel']">
             <h1 class="text-[25px] sm:text-[44px] md:text-[52px]
-           mb-0 leading-[1.2] pt-5
-           whitespace-nowrap sm:whitespace-normal
-           bg-gradient-to-r from-black to-[#D53F52]
-           bg-clip-text text-transparent" style="font-family:'Borel',cursive;">
+    mb-1 leading-[1.15] pt-5
+    whitespace-nowrap sm:whitespace-normal
+    bg-gradient-to-r from-black to-[#D53F52]
+    bg-clip-text text-transparent" style="font-family:'Borel',cursive;">
                 From concept to applause.
             </h1>
 
-            <p class="mt-1 text-[18px] md:text-[22px] text-[#7a2d2d]">
+            <p class="mt-0 text-[18px] md:text-[22px] text-[#7a2d2d]">
                 Celebrations crafted with heart !
             </p>
         </div>
 
+        <div class="stats-wrapper stats-single-image">
 
+            <div class="stats-count left">
+                <h3 class="count" data-target="250">0</h3>
+                <p>Events Hosted</p>
+            </div>
+
+            <div class="stats-image">
+                <img src="/assets/Count img.png" alt="Events showcase">
+            </div>
+
+            <div class="stats-count right">
+                <h3 class="count" data-target="32000">0</h3>
+                <p>Hosted Guest</p>
+            </div>
+
+
+        </div>
     </section>
+
+
+
+    <script>
+        const counters = document.querySelectorAll('.count');
+        let started = false;
+
+        function animateCounts() {
+            if (started) return;
+            started = true;
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 1500;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const value = Math.floor(progress * target);
+
+                    counter.textContent = value.toLocaleString() + '+';
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+
+                requestAnimationFrame(update);
+            });
+        }
+
+        /* Trigger on scroll */
+        const observer = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting) {
+                animateCounts();
+                observer.disconnect();
+            }
+        }, { threshold: 0.4 });
+
+        observer.observe(document.querySelector('.stats-single-image'));
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- ================= CTA SECTION ================= -->
+    <section class="px-4 sm:px-6 lg:px-10 py-10 bg-white">
+        <div class=" mx-auto text-center">
+
+            <!-- HEADLINE -->
+            <h2 class="text-3xl sm:text-4xl py-1 :text-5xl font-medium text-black leading-tight">
+                <b> Everything is possible </b> with just one phone call.<br />
+                This is just the beginning of what we have to offer.
+            </h2>
+
+            <!-- DESCRIPTION -->
+            <p class="py-4">
+                An event at the Chatta Events allows you to have peace of mind. Working with our professional and
+                knowledgeable staff, you can rest easy knowing that we will handle every detail with care. Not only<br>
+                will you experience our genuine Southern hospitality, but the refreshing simplicity that comes from
+                our "one-stop shop" approach.
+            </p>
+
+
+            <!-- BUTTON -->
+            <div class=" flex justify-center">
+                <a href="#services" class="relative inline-flex items-center
+    pl-6 pr-16 py-4  
+    bg-black text-white rounded-full
+    transition-all duration-300 hover:bg-black/90">
+                    <!-- TEXT -->
+                    <span class="text-sm font-medium leading-none">
+                        Our Services
+                    </span>
+
+                    <!-- ICON -->
+                    <span class="absolute right-2 top-1/2 -translate-y-1/2
+      w-9 h-9 rounded-full bg-white
+      flex items-center justify-center
+      transition-transform duration-300
+      hover:translate-x-0.5 hover:-translate-y-0.5">
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-black"></i>
+                    </span>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+
 
 
 
