@@ -28,6 +28,10 @@ body {
     background-color: #fff;
 }
 
+.Borel {
+    font-family: "Borel", cursive;
+}
+
 /* =========================
    SPAN FONT
 ========================= */
@@ -161,5 +165,32 @@ p {
 
     100% {
         opacity: 0.15;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes arrowBounce {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: rotate(45deg) translate(6px, 6px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(45deg) translate(0, 0);
+        opacity: 0.4;
     }
 }
