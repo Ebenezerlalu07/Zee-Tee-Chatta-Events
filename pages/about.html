@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zee Tee Chatta Events</title>
+    <link rel="icon" type="image/x-icon" href="/Assets/Logo only.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="bg-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white">
+        <div class="relative px-4 sm:px-6 lg:px-10
+ py-4 flex items-center justify-between">
+
+            <!-- LEFT : LOGO -->
+            <div class="flex items-center gap-3">
+                <a href="/index.html">
+                    <img src="/assets/Logo.png" alt="Logo" class="w-24 sm:w-28 md:w-32 lg:w-36" />
+                </a>
+            </div>
+
+            <!-- CENTER : MENU -->
+            <nav id="desktopMenu" class="absolute left-1/2 -translate-x-1/2
+            hidden md:flex items-center
+            gap-8
+            text-lg lg:text-xl xl:text-[22px]
+            font-medium tracking-wide
+            transition-all duration-500 ease-out">
+
+                <a href="/index.html" class="  text-black hover:text-[#D53F52] transition-colors">
+                    Home
+                </a>
+
+                <a href="/pages/about.html" class="text-[#D53F52] ">
+                    About
+                </a>
+
+                <a href="#" class="text-black hover:text-[#D53F52] transition-colors">
+                    Service
+                </a>
+
+                <a href="#" class="text-black hover:text-[#D53F52] transition-colors">
+                    Gallery
+                </a>
+
+                <a href="#" class="text-black hover:text-[#D53F52] transition-colors">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- RIGHT : HAMBURGER -->
+            <button id="hamburger" class="flex flex-col gap-[6px]">
+                <span class="h-[2px] w-7 bg-black transition-all duration-300"></span>
+                <span class="h-[2px] w-7 bg-black transition-all duration-300"></span>
+                <span class="h-[2px] w-7 bg-black transition-all duration-300"></span>
+            </button>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-500 bg-white">
+            <nav class="flex flex-col items-center gap-6 py-6 text-lg font-medium">
+                <a href="#" class="text-[#D53F52]">Home</a>
+                <a href="#">About</a>
+                <a href="#">Service</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const desktopMenu = document.getElementById("desktopMenu");
+        const bars = hamburger.children;
+
+        hamburger.addEventListener("click", () => {
+            // Mobile menu toggle
+            mobileMenu.classList.toggle("max-h-[320px]");
+
+            // Fade desktop menu
+            desktopMenu.classList.toggle("opacity-0");
+            desktopMenu.classList.toggle("pointer-events-none");
+            desktopMenu.classList.toggle("translate-y-2");
+
+            // Hamburger animation
+            bars[0].classList.toggle("rotate-45");
+            bars[0].classList.toggle("translate-y-[8px]");
+            bars[1].classList.toggle("opacity-0");
+            bars[2].classList.toggle("-rotate-45");
+            bars[2].classList.toggle("-translate-y-[8px]");
+        });
+    </script>
+
+
+
+
+
+
+
+    <section class="fade-up pt-20 md:pt-28 -mt-4 md:-mt-5 px-4 sm:px-6 lg:px-10">
+        <div class="relative h-[150px] sm:h-[280px] md:h-[380px] lg:h-[380px]
+           rounded-3xl overflow-hidden">
+            <!-- Background Image -->
+            <img src="/assets/About.jpg" alt="About Us Banner"
+                class="absolute inset-0 w-full h-full object-cover object-top" />
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 "></div>
+
+            <!-- Text -->
+            <div class="relative z-10 h-full flex items-center justify-center">
+                <h1 class="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium">
+                    About Us
+                </h1>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="fade-up px-4 sm:px-6 lg:px-10 py-8 bg-white">
+        <div class="mx-auto ">
+
+            <!-- TITLE -->
+            <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+                We are here to help each person to celebrate their special moments with budget price.
+            </h2>
+
+            <!-- DESCRIPTION -->
+            <div class="max-w-[1800px] text-base md:text-lg text-gray-800 leading-relaxed space-y-4">
+                <p>
+                    Founded in 2019, ZT-Chatta Events was created to provide an affordable event venue in Chattanooga
+                    for
+                    families and communities looking to celebrate special moments without overspending. After facing the
+                    challenge of finding a budget-friendly event space for a family celebration, our founders turned
+                    that
+                    need into a solution for the Chattanooga area.
+                </p>
+
+                <p>
+                    Chatta Events is a family-owned event space in Chattanooga, offering a naturally elegant indoor
+                    venue
+                    inspired by the beauty of the surrounding area. Our venue is ideal for birthday parties, weddings,
+                    baby
+                    showers, bridal showers, corporate events, and private celebrations.
+                </p>
+
+                <p>
+                    Our mission is simple: to be the go-to budget friendly event venue in Chattanooga, helping everyone
+                    create memorable events in a beautiful, welcoming space.
+                </p>
+            </div>
+
+            <!-- STATS + CTA -->
+            <div class="mt-10">
+
+                <div class="grid grid-cols-2 gap-6
+           sm:grid-cols-2
+           lg:flex lg:flex-nowrap lg:items-center lg:gap-x-16">
+
+                    <!-- Members -->
+                    <div class="flex flex-col items-center min-w-[140px]">
+                        <h3 class="text-[#D53F52] text-3xl sm:text-4xl md:text-6xl font-semibold">
+                            15
+                        </h3>
+                        <p class="text-base sm:text-lg md:text-3xl font-medium mt-1 md:mt-2">
+                            Members
+                        </p>
+                    </div>
+
+                    <!-- Divider (desktop only) -->
+                    <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+
+                    <!-- Events -->
+                    <div class="flex flex-col items-center min-w-[180px]">
+                        <h3 class="text-[#D53F52] text-3xl sm:text-4xl md:text-6xl font-semibold">
+                            250+
+                        </h3>
+                        <p class="text-base sm:text-lg md:text-3xl font-medium mt-1 md:mt-2">
+                            Events Hosted
+                        </p>
+                    </div>
+
+                    <!-- Divider (desktop only) -->
+                    <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+
+                    <!-- Guests -->
+                    <div class="flex flex-col items-center min-w-[200px]">
+                        <h3 class="text-[#D53F52] text-3xl sm:text-4xl md:text-6xl font-semibold">
+                            32,000+
+                        </h3>
+                        <p class="text-base sm:text-lg md:text-3xl font-medium mt-1 md:mt-2">
+                            Hosted Guest
+                        </p>
+                    </div>
+
+                    <!-- Divider (desktop only) -->
+                    <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+
+                    <!-- Collabs -->
+                    <div class="flex flex-col items-center min-w-[200px]">
+                        <h3 class="text-[#D53F52] text-3xl sm:text-4xl md:text-6xl font-semibold">
+                            150+
+                        </h3>
+                        <p class="text-base sm:text-lg md:text-3xl font-medium mt-1 md:mt-2">
+                            Expert Collabs
+                        </p>
+                    </div>
+
+                    <!-- CTA (full row on mobile, inline on desktop) -->
+                    <div class="col-span-2 lg:col-span-1 flex justify-center mt-2 lg:mt-0">
+                        <a href="#services" class="relative inline-flex items-center
+               w-full sm:w-auto
+               pl-5 pr-14 py-3 sm:pl-6 sm:pr-16 sm:py-4
+               bg-black text-white rounded-full
+               text-sm font-medium
+               transition-all duration-300 hover:bg-black/90">
+
+                            <span>Our Services</span>
+
+                            <span class="absolute right-2 top-1/2 -translate-y-1/2
+                 w-8 h-8 sm:w-9 sm:h-9
+                 rounded-full bg-white
+                 flex items-center justify-center">
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 text-black"></i>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#e6e6e6]">
+        <div class=" px-4 sm:px-6 lg:px-10 py-4">
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+
+                <!-- LEFT : NAV LINKS -->
+                <nav class="flex flex-wrap items-center gap-6 text-sm text-gray-700">
+                    <a href="/index.html" class="hover:text-black transition">Home</a>
+                    <a href="/pages/about.html" class="hover:text-black transition">About</a>
+                    <a href="#" class="hover:text-black transition">Service</a>
+                    <a href="#" class="hover:text-black transition">Gallery</a>
+                    <a href="#" class="hover:text-black transition">Contact</a>
+                </nav>
+
+                <!-- RIGHT : COPYRIGHT -->
+                <p class="text-sm text-gray-700">
+                    © Copyright Chatta Events
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= PAGE LOADER ================= -->
+    <div id="pageLoader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
+        <div class="apple-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("pageLoader");
+
+            loader.style.transition = "opacity 0.45s ease";
+            loader.style.opacity = "0";
+
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 450);
+        });
+    </script>
+
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+
+</body>
+
+</html>
