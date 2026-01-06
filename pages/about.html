@@ -157,85 +157,100 @@
                 <p>
                     Our mission is simple: to be the go-to budget friendly event venue in Chattanooga.
                 </p>
-            </div><br><br>  
+            </div><br><br>
+
 
             <!-- STATS + CTA -->
-            <section class="bg-white px-4 sm:px-6 lg:px-10">
+            <section class="bg-white px-4 sm:px-6 lg:px-10 overflow-hidden">
                 <div class="mx-auto">
 
-                    <div class="grid grid-cols-2 gap-6
-                    sm:grid-cols-2
-                    lg:flex lg:flex-nowrap lg:items-center lg:gap-x-16">
+                    <!-- MOBILE AUTO SLIDER WRAPPER -->
+                    <div class="stats-mobile-wrapper">
 
-                        <!-- Members -->
-                        <div class="flex flex-col items-center min-w-0 lg:min-w-[140px]">
-                            <h3 class="count text-[#D53F52] text-2xl sm:text-3xl md:text-6xl font-semibold"
-                                data-target="15">0</h3>
-                            <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
-                                Members
-                            </p>
+                        <div class="stats-mobile-track
+                        sm:grid sm:grid-cols-2 sm:gap-6
+                        lg:flex lg:flex-nowrap lg:items-center lg:gap-x-16">
+
+                            <!-- Members -->
+                            <div class="stats-item flex flex-col items-center min-w-[140px] lg:min-w-[140px]">
+                                <h3 class="count text-[#D53F52] text-3xl sm:text-3xl md:text-6xl font-semibold"
+                                    data-target="15">0</h3>
+                                <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
+                                    Members
+                                </p>
+                            </div>
+
+                            <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+
+                            <!-- Events -->
+                            <div class="stats-item flex flex-col items-center min-w-[160px] lg:min-w-[180px]">
+                                <h3 class="count text-[#D53F52] text-3xl sm:text-3xl md:text-6xl font-semibold"
+                                    data-target="250">0+</h3>
+                                <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
+                                    Events Hosted
+                                </p>
+                            </div>
+
+                            <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+
+                            <!-- Guests -->
+                            <div class="stats-item flex flex-col items-center min-w-[180px] lg:min-w-[200px]">
+                                <h3 class="count text-[#D53F52] text-3xl sm:text-3xl md:text-6xl font-semibold"
+                                    data-target="32000">0+</h3>
+                                <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
+                                    Hosted Guest
+                                </p>
+                            </div>
+
+                            <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+
+                            <!-- Collabs -->
+                            <div class="stats-item flex flex-col items-center min-w-[180px] lg:min-w-[200px]">
+                                <h3 class="count text-[#D53F52] text-3xl sm:text-3xl md:text-6xl font-semibold"
+                                    data-target="150">0+</h3>
+                                <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
+                                    Expert Collabs
+                                </p>
+                            </div>
+
+                            <!-- CTA -->
+                            <!-- hidden on MOBILE + hidden on 32-inch+ -->
+                            <div class="stats-item hidden sm:flex justify-center mt-4
+                            [@media(min-width:2560px)]:hidden">
+                                <a href="#services" class="relative inline-flex items-center
+                              min-w-max
+                              pl-5 pr-14 py-3 sm:pl-6 sm:pr-16 sm:py-4
+                              bg-black text-white rounded-full
+                              text-sm font-medium
+                              transition-all duration-300 hover:bg-black/90">
+
+                                    <span>Our Services</span>
+
+                                    <span class="absolute right-2 top-1/2 -translate-y-1/2
+                                     w-8 h-8 sm:w-9 sm:h-9
+                                     rounded-full bg-white
+                                     flex items-center justify-center">
+                                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-black"></i>
+                                    </span>
+                                </a>
+                            </div>
+
                         </div>
-
-                        <div class="hidden lg:block w-px h-20 bg-black/30"></div>
-
-                        <!-- Events -->
-                        <div class="flex flex-col items-center min-w-0 lg:min-w-[180px]">
-                            <h3 class="count text-[#D53F52] text-2xl sm:text-3xl md:text-6xl font-semibold"
-                                data-target="250">0+</h3>
-                            <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
-                                Events Hosted
-                            </p>
-                        </div>
-
-                        <div class="hidden lg:block w-px h-20 bg-black/30"></div>
-
-                        <!-- Guests -->
-                        <div class="flex flex-col items-center min-w-0 lg:min-w-[200px]">
-                            <h3 class="count text-[#D53F52] text-2xl sm:text-3xl md:text-6xl font-semibold"
-                                data-target="32000">0+</h3>
-                            <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
-                                Hosted Guest
-                            </p>
-                        </div>
-
-                        <div class="hidden lg:block w-px h-20 bg-black/30"></div>
-
-                        <!-- Collabs -->
-                        <div class="flex flex-col items-center min-w-0 lg:min-w-[200px]">
-                            <h3 class="count text-[#D53F52] text-2xl sm:text-3xl md:text-6xl font-semibold"
-                                data-target="150">0+</h3>
-                            <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
-                                Expert Collabs
-                            </p>
-                        </div>
-
-                        <!-- CTA -->
-                        <div class="col-span-2 lg:col-span-1 flex justify-center mt-4 lg:mt-0">
-                            <a href="#services" class="relative inline-flex items-center
-                          w-full sm:w-auto
-                          pl-5 pr-14 py-3 sm:pl-6 sm:pr-16 sm:py-4
-                          bg-black text-white rounded-full
-                          text-sm font-medium
-                          transition-all duration-300 hover:bg-black/90">
-
-                                <span>Our Services</span>
-
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2
-                                 w-8 h-8 sm:w-9 sm:h-9
-                                 rounded-full bg-white
-                                 flex items-center justify-center">
-                                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-black"></i>
-                                </span>
-                            </a>
-                        </div>
-
                     </div>
+
                 </div>
             </section>
 
 
+
+
+
         </div>
     </section>
+
+
+
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const counters = document.querySelectorAll(".count");

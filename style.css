@@ -159,6 +159,11 @@ a {
     font-family: "Gill Sans MT", "Gill Sans", Calibri, Arial, sans-serif;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 /* =========================
    SMOOTH SCROLL
 ========================= */
@@ -279,6 +284,38 @@ p {
 
 
 
+/* MOBILE AUTO SLIDER ONLY */
+.stats-mobile-wrapper {
+    overflow: hidden;
+}
+
+/* Mobile only */
+@media (max-width: 639px) {
+    .stats-mobile-track {
+        display: flex;
+        gap: 24px;
+        width: max-content;
+        animation: mobileAutoSlide 12s linear infinite;
+    }
+}
+
+/* Disable animation on tablet & desktop */
+@media (min-width: 640px) {
+    .stats-mobile-track {
+        animation: none;
+        width: auto;
+    }
+}
+
+@keyframes mobileAutoSlide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 
 
@@ -409,4 +446,3 @@ p {
         order: 3;
     }
 }
-
