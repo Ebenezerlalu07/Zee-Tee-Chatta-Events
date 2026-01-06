@@ -134,7 +134,7 @@
 
 
 
-    <section class="fade-up px-4 sm:px-6 lg:px-10 py-8 bg-white overflow-x-hidden">
+    <section class="fade-up px-4 sm:px-6 lg:px-10 py-5 bg-white overflow-x-hidden">
         <div class="mx-auto">
 
             <!-- TITLE -->
@@ -240,11 +240,6 @@
 
                 </div>
             </section>
-
-
-
-
-
         </div>
     </section>
 
@@ -254,38 +249,50 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const counters = document.querySelectorAll(".count");
+            const isMobile = window.innerWidth < 640;
 
-            const animateCount = (el) => {
-                const target = +el.getAttribute("data-target");
-                const hasPlus = el.textContent.includes("+");
+            counters.forEach(counter => {
+                const target = +counter.dataset.target;
+                const hasPlus = counter.textContent.includes("+");
+
+                // ✅ MOBILE → NO ANIMATION
+                if (isMobile) {
+                    counter.textContent =
+                        target.toLocaleString() + (hasPlus ? "+" : "");
+                    return;
+                }
+
+                // ✅ TABLET & DESKTOP → ANIMATE
                 let current = 0;
-
-                const increment = Math.max(1, Math.floor(target / 80));
+                const step = Math.max(1, Math.floor(target / 90));
 
                 const update = () => {
-                    current += increment;
+                    current += step;
                     if (current >= target) {
-                        el.textContent = target.toLocaleString() + (hasPlus ? "+" : "");
+                        counter.textContent =
+                            target.toLocaleString() + (hasPlus ? "+" : "");
                     } else {
-                        el.textContent = current.toLocaleString() + (hasPlus ? "+" : "");
+                        counter.textContent =
+                            current.toLocaleString() + (hasPlus ? "+" : "");
                         requestAnimationFrame(update);
                     }
                 };
-                update();
-            };
 
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
-                        entry.target.classList.add("counted");
-                        animateCount(entry.target);
-                    }
-                });
-            }, { threshold: 0.4 });
+                // animate when visible
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            update();
+                            observer.disconnect();
+                        }
+                    });
+                }, { threshold: 0.4 });
 
-            counters.forEach(counter => observer.observe(counter));
+                observer.observe(counter);
+            });
         });
     </script>
+
 
 
 
