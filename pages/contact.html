@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zee Tee Chatta Events</title>
+    <link rel="icon" type="image/x-icon" href="/Assets/Logo only.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="bg-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white">
+        <div class="relative px-4 sm:px-6 lg:px-10
+ py-4 flex items-center justify-between">
+
+            <!-- LEFT : LOGO -->
+            <div class="flex items-center gap-3">
+                <a href="/index.html">
+                    <img src="/assets/Logo.png" alt="Logo" class="w-24 sm:w-28 md:w-32 lg:w-36" />
+                </a>
+            </div>
+
+            <!-- CENTER : MENU -->
+            <nav id="desktopMenu" class="absolute left-1/2 -translate-x-1/2
+            hidden md:flex items-center
+            gap-8
+            text-lg lg:text-xl xl:text-[22px]
+            font-medium tracking-wide
+            transition-all duration-500 ease-out">
+
+                <a href="/index.html" class="  text-black hover:text-[#D53F52] transition-colors">
+                    Home
+                </a>
+
+                <a href="/pages/about.html" class=" text-black hover:text-[#D53F52] transition-colors ">
+                    About
+                </a>
+
+                <a href="/pages/service.html" class="text-black hover:text-[#D53F52] transition-colors">
+                    Service
+                </a>
+
+                <a href="/pages/gallery.html" class="text-[#D53F52] ">
+                    Gallery
+                </a>
+
+                <a href="/pages/contact.html" class="text-black hover:text-[#D53F52] transition-colors">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- RIGHT : HAMBURGER -->
+            <button id="hamburger" class="flex flex-col gap-[6px]">
+                <span class="h-[2px] w-7 bg-black transition-all duration-300"></span>
+                <span class="h-[2px] w-7 bg-black transition-all duration-300"></span>
+                <span class="h-[2px] w-7 bg-black transition-all duration-300"></span>
+            </button>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-500 bg-white">
+            <nav class="flex flex-col items-center gap-6 py-6 text-lg font-medium">
+                <a href="/index.html">Home</a>
+                <a href="/pages/about.html">About</a>
+                <a href="/pages/service.html">Service</a>
+                <a href="/pages/gallery.html" class="text-[#D53F52]">Gallery</a>
+                <a href="/pages/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const desktopMenu = document.getElementById("desktopMenu");
+        const bars = hamburger.children;
+
+        hamburger.addEventListener("click", () => {
+            // Mobile menu toggle
+            mobileMenu.classList.toggle("max-h-[320px]");
+
+            // Fade desktop menu
+            desktopMenu.classList.toggle("opacity-0");
+            desktopMenu.classList.toggle("pointer-events-none");
+            desktopMenu.classList.toggle("translate-y-2");
+
+            // Hamburger animation
+            bars[0].classList.toggle("rotate-45");
+            bars[0].classList.toggle("translate-y-[8px]");
+            bars[1].classList.toggle("opacity-0");
+            bars[2].classList.toggle("-rotate-45");
+            bars[2].classList.toggle("-translate-y-[8px]");
+        });
+    </script>
+
+
+    <section class="fade-up pt-20 md:pt-28 -mt-4 md:-mt-5 px-4 sm:px-6 lg:px-10">
+        <div class="relative h-[150px] sm:h-[280px] md:h-[380px] lg:h-[380px]
+           rounded-3xl overflow-hidden">
+            <!-- Background Image -->
+            <img src="/assets/Contact banner.jpg" alt="About Us Banner"
+                class="absolute inset-0 w-full h-full object-cover object-top" />
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 "></div>
+
+            <!-- Text -->
+            <div class="relative z-10 h-full flex items-center justify-center">
+                <h1 class="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium">
+                    Contact Us
+                </h1>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#e6e6e6]">
+        <div class=" px-4 sm:px-6 lg:px-10 py-4">
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+
+                <!-- LEFT : NAV LINKS -->
+                <nav class="flex flex-wrap items-center gap-6 text-sm text-gray-700">
+                    <a href="/index.html" class="hover:text-black transition">Home</a>
+                    <a href="/pages/about.html" class="hover:text-black transition">About</a>
+                    <a href="/pages/service.html" class="hover:text-black transition">Service</a>
+                    <a href="/pages/gallery.html" class="hover:text-black transition">Gallery</a>
+                    <a href="/pages/contact.html" class="hover:text-black transition">Contact</a>
+                </nav>
+
+                <!-- RIGHT : COPYRIGHT -->
+                <p class="text-sm text-gray-700">
+                    © Copyright Chatta Events
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= PAGE LOADER ================= -->
+    <div id="pageLoader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
+        <div class="apple-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("pageLoader");
+
+            loader.style.transition = "opacity 0.45s ease";
+            loader.style.opacity = "0";
+
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 450);
+        });
+    </script>
+
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+
+</body>
+
+</html>
