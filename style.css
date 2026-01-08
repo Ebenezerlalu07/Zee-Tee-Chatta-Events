@@ -553,13 +553,23 @@ p {
 
 
 
+/* MOBILE STATS AUTO SLIDER */
 @keyframes marquee {
-    from {
+    0% {
         transform: translateX(0);
     }
 
-    to {
+    100% {
         transform: translateX(-50%);
+    }
+}
+
+/* apply only on mobile */
+@media (max-width: 1023px) {
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 18s linear infinite;
     }
 }
 

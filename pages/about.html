@@ -168,46 +168,33 @@
         <div class="mx-auto overflow-hidden lg:overflow-visible">
 
             <!-- MOBILE SLIDER -->
+            <!-- MOBILE SLIDER -->
             <div class="lg:hidden">
                 <div class="flex gap-x-14 animate-marquee whitespace-nowrap">
 
-                    <!-- 1 -->
                     <div class="inline-block">
-                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="15">0</h3>
+                        <h3 class="text-[34px] font-semibold text-[#D53F52]">15+</h3>
                         <p class="text-[18px] font-medium">Members</p>
                     </div>
 
-                    <!-- 2 -->
                     <div class="inline-block">
-                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="250">0</h3>
+                        <h3 class="text-[34px] font-semibold text-[#D53F52]">250+</h3>
                         <p class="text-[18px] font-medium">Events Hosted</p>
                     </div>
 
-                    <!-- 3 -->
                     <div class="inline-block">
-                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="32000">0</h3>
+                        <h3 class="text-[34px] font-semibold text-[#D53F52]">32,000+</h3>
                         <p class="text-[18px] font-medium">Hosted Guest</p>
                     </div>
 
-                    <!-- 4 -->
                     <div class="inline-block">
-                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="150">0</h3>
+                        <h3 class="text-[34px] font-semibold text-[#D53F52]">150+</h3>
                         <p class="text-[18px] font-medium">Expert Collabs</p>
-                    </div>
-
-                    <!-- duplicate for smooth loop -->
-                    <div class="inline-block">
-                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="15">15</h3>
-                        <p class="text-[18px] font-medium">Members</p>
-                    </div>
-
-                    <div class="inline-block">
-                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="250">250</h3>
-                        <p class="text-[18px] font-medium">Events Hosted</p>
                     </div>
 
                 </div>
             </div>
+
 
             <!-- DESKTOP / TABLET -->
             <div class="hidden lg:flex flex-wrap lg:flex-nowrap items-center gap-x-14">
@@ -257,36 +244,56 @@
             </div>
         </div>
 
-
-
-
-
     </section>
 
 
     <!-- ================= STATS BAR ================= -->
-
-
     <script>
-        const counters = document.querySelectorAll(".count");
+        document.addEventListener("DOMContentLoaded", () => {
+            //  Stop completely on mobile & tablet
+            if (window.innerWidth < 1024) return;
 
-        counters.forEach(counter => {
-            const target = +counter.dataset.target;
-            let current = 0;
+            const counters = document.querySelectorAll(".count");
 
-            const update = () => {
-                current += Math.ceil(target / 50);
-                if (current < target) {
-                    counter.innerText = current.toLocaleString();
-                    requestAnimationFrame(update);
-                } else {
-                    counter.innerText = target.toLocaleString() + "+";
+            const animateCounter = (counter) => {
+                const target = Number(counter.dataset.target);
+                const duration = 1200;
+                const start = performance.now();
+
+                function update(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+
+                    counter.textContent =
+                        Math.floor(target * easeOut).toLocaleString();
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target.toLocaleString() + "+";
+                    }
                 }
+
+                requestAnimationFrame(update);
             };
 
-            update();
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounter(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.6 }
+            );
+
+            counters.forEach(counter => observer.observe(counter));
         });
     </script>
+
+
 
 
 
