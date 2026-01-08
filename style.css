@@ -28,6 +28,10 @@ body {
     background-color: #fff;
 }
 
+.label {
+    font-family: "Gill Sans MT", "Gill Sans", Calibri, Arial, sans-serif;
+}
+
 .Borel {
     font-family: "Borel", cursive;
 }
@@ -559,6 +563,23 @@ p {
     }
 }
 
-.animate-marquee {
-    animation: marquee 10s linear infinite;
+@keyframes arrowDown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.arrow-animate {
+    animation: arrowDown 1.5s ease-in-out infinite;
 }
