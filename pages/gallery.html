@@ -152,59 +152,61 @@
 
 
 
-    <section class="fade-up px-4 lg:px-10">
-        <div class="mx-auto">
 
-            <div class="gallery-grid">
 
-                <!-- ROW 1 -->
-                <div class="gallery-box gallery-sm">
-                    <img src="/assets/1.jpg" class="gallery-img">
+    <section class="fade-up px-4 sm:px-6 lg:px-10 py-4 bg-white overflow-x-hidden">
+        <div class=" mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4
+             gap-4
+             auto-rows-[220px]">
+
+                <!-- 1 SMALL -->
+                <div>
+                    <img src="/assets/1 (2).jpg" class="w-full h-full object-cover " />
                 </div>
 
-                <div class="gallery-box gallery-lg">
-                    <img src="/assets/2.jpg" class="gallery-img">
+                <!-- 2 BIG -->
+                <div class="row-span-2">
+                    <img src="/assets/2.jpg" class="w-full h-full object-cover " />
                 </div>
 
-                <div class="gallery-box gallery-sm">
-                    <img src="/assets/3.jpg" class="gallery-img">
+                <!-- 3 SMALL (NO BLANK SPACE NOW) -->
+                <div>
+                    <img src="/assets/3.jpg" class="w-full h-full object-cover" />
                 </div>
 
-                <div class="gallery-box gallery-lg">
-                    <img src="/assets/4.jpg" class="gallery-img">
+                <!-- 4 BIG -->
+                <div class="row-span-2">
+                    <img src="/assets/4.jpg" class="w-full h-full object-cover " />
                 </div>
 
-                <!-- ROW 2 -->
-                <div class="gallery-box gallery-lg">
-                    <img src="/assets/5.jpg" class="gallery-img">
+                <!-- 5 BIG -->
+                <div class="row-span-2">
+                    <img src="/assets/home 1.jpg" class="w-full h-full object-cover object-top " />
                 </div>
 
-                <div class="gallery-box gallery-sm">
-                    <img src="/assets/5.jpg" class="gallery-img">
+
+
+                <!-- 7 BIG -->
+                <div class="row-span-2">
+                    <img src="/assets/6.jpg" class="w-full h-full object-cover object-top" />
                 </div>
 
-                <div class="gallery-box gallery-lg">
-                    <img src="/assets/6.jpg" class="gallery-img">
+                <!-- 8 SMALL -->
+                <div>
+                    <img src="/assets/7.jpg" class="w-full h-full object-cover " />
                 </div>
 
-                <div class="gallery-box gallery-sm">
-                    <img src="/assets/7.jpg" class="gallery-img">
-                </div>
-
-                <div class="gallery-box gallery-lg">
-                    <img src="/assets/home 1.jpg" class="gallery-img">
-                </div>
-                <div class="gallery-box gallery-sm">
-                    <img src="/assets/1.jpg" class="gallery-img">
-                </div>
-                <div class="gallery-box gallery-sm">
-                    <img src="/assets/Service.jpg" class="gallery-img">
+                                <!-- 8 SMALL -->
+                <div>
+                    <img src="/assets/8.jpg" class="w-full h-full object-cover " />
                 </div>
 
             </div>
 
         </div>
-    </section>
+    </section><br>
 
 
 
@@ -237,11 +239,21 @@
 
                 <!-- LEFT : NAV LINKS -->
                 <nav class="flex flex-wrap items-center gap-6 text-sm text-gray-700">
-                    <a href="/index.html" class="hover:text-black transition">Home</a>
-                    <a href="/pages/about.html" class="hover:text-black transition">About</a>
-                    <a href="/pages/service.html" class="hover:text-black transition">Service</a>
-                    <a href="/pages/gallery.html" class="hover:text-black transition">Gallery</a>
-                    <a href="/pages/contact.html" class="hover:text-black transition">Contact</a>
+                    <a href="/index.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Home </p>
+                    </a>
+                    <a href="/pages/about.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> About </p>
+                    </a>
+                    <a href="/pages/service.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700">Service </p>
+                    </a>
+                    <a href="/pages/gallery.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Gallery </p>
+                    </a>
+                    <a href="/pages/contact.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Contact </p>
+                    </a>
                 </nav>
 
                 <!-- RIGHT : COPYRIGHT -->
@@ -252,7 +264,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- ================= PAGE LOADER ================= -->
     <div id="pageLoader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white">

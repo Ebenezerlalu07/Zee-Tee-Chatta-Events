@@ -10,6 +10,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 
 
 
@@ -131,11 +133,161 @@
 
 
 
+    <section class="fade-up px-4 sm:px-6 lg:px-10 py-5 bg-white overflow-x-hidden">
+        <div class="mx-auto">
+
+            <div class="flex flex-col lg:flex-row
+             items-start lg:items-center
+             justify-start lg:justify-between
+             gap-y-6">
+
+                <!-- LEFT TEXT -->
+                <h2 class="text-left
+               text-[18px] sm:text-[20px] lg:text-[22px]
+               font-medium leading-snug max-w-3xl">
+                    Get in touch and we'll get back to you promptly and personally as soon as we can.
+                    We genuinely look forward to hearing from you!
+                </h2>
+
+                <!-- RIGHT SIDE -->
+                <div class="flex items-center gap-6">
+
+                    <!-- DIVIDER (desktop only) -->
+                    <div class="hidden lg:block w-px h-10 bg-black/40"></div>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="flex items-center gap-6 text-[22px]">
+                        <a href="#" class="hover:opacity-70 transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="hover:opacity-70 transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="hover:opacity-70 transition">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="hover:opacity-70 transition">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
 
 
 
 
 
+
+    <section class="py-6  border-black/10">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- HEADER -->
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-3">
+                    Have a question or need assistance?
+                </h1>
+                <p class="text-base text-black/70 max-w-2xl mx-auto">
+                    Questions, comments, or suggestions? Simply fill in the form and
+                    we’ll be in touch shortly.
+                </p>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+
+                <!-- LEFT : FORM -->
+                <div class="flex flex-col justify-between">
+
+                    <div>
+                        <h2 class="text-xl font-semibold mb-8">
+                            Get in Contact!
+                        </h2>
+
+                        <form id="contactForm" class="space-y-8">
+
+                            <!-- Name -->
+                            <div>
+                                <label class="block text-sm mb-1">Name</label>
+                                <input type="text" name="Name" class="w-full border-b border-black/40
+                       focus:border-black outline-none py-1 bg-transparent" />
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-sm mb-1">
+                                    Email<span class="text-red-500">*</span>
+                                </label>
+                                <input type="email" name="Email" required class="w-full border-b border-black/40
+                       focus:border-black outline-none py-1 bg-transparent" />
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label class="block text-sm mb-1">Message</label>
+                                <textarea name="Message" rows="2" class="w-full border-b border-black/40
+                       focus:border-black outline-none py-1
+                       resize-none bg-transparent"></textarea>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="w-full bg-black text-white py-3 rounded-full
+                     font-medium transition hover:bg-black/90">
+                                Submit
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT : MAP (REDUCED HEIGHT) -->
+                <div class="w-full min-h-[320px] lg:min-h-[360px]
+                  rounded-2xl overflow-hidden">
+                    <iframe src="https://www.google.com/maps?q=Sienna%20Plantation%20Texas&output=embed"
+                        class="w-full h-full border-0" loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section> <br>
+
+
+    <!-- ================= GMAIL COMPOSER SCRIPT ================= -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.querySelector('input[name="Name"]').value;
+            const email = document.querySelector('input[name="Email"]').value;
+            const message = document.querySelector('textarea[name="Message"]').value;
+
+            const subject = encodeURIComponent("New Contact Inquiry");
+            const body = encodeURIComponent(
+                `Hello,
+
+You have received a new message via the website contact form.
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+---
+Sent from website contact form`
+            );
+
+            window.location.href =
+                `mailto:ebenezerlalu07@gmail.com?subject=${subject}&body=${body}`;
+        });
+    </script>
 
 
 
@@ -167,11 +319,21 @@
 
                 <!-- LEFT : NAV LINKS -->
                 <nav class="flex flex-wrap items-center gap-6 text-sm text-gray-700">
-                    <a href="/index.html" class="hover:text-black transition">Home</a>
-                    <a href="/pages/about.html" class="hover:text-black transition">About</a>
-                    <a href="/pages/service.html" class="hover:text-black transition">Service</a>
-                    <a href="/pages/gallery.html" class="hover:text-black transition">Gallery</a>
-                    <a href="/pages/contact.html" class="hover:text-black transition">Contact</a>
+                    <a href="/index.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Home </p>
+                    </a>
+                    <a href="/pages/about.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> About </p>
+                    </a>
+                    <a href="/pages/service.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700">Service </p>
+                    </a>
+                    <a href="/pages/gallery.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Gallery </p>
+                    </a>
+                    <a href="/pages/contact.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Contact </p>
+                    </a>
                 </nav>
 
                 <!-- RIGHT : COPYRIGHT -->

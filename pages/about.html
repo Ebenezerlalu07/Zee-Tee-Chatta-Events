@@ -49,7 +49,7 @@
                     Service
                 </a>
 
-                <a href="#" class="text-black hover:text-[#D53F52] transition-colors">
+                <a href="/pages/gallery.html" class="text-black hover:text-[#D53F52] transition-colors">
                     Gallery
                 </a>
 
@@ -73,7 +73,7 @@
         <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-500 bg-white">
             <nav class="flex flex-col items-center gap-6 py-6 text-lg font-medium">
                 <a href="/index.html">Home</a>
-                <a href="/pages/about.html"  class="text-[#D53F52]">About</a>
+                <a href="/pages/about.html" class="text-[#D53F52]">About</a>
                 <a href="/pages/service.html">Service</a>
                 <a href="/pages/gallery.html">Gallery</a>
                 <a href="/pages/contact.html">Contact</a>
@@ -157,141 +157,140 @@
                 <p>
                     Our mission is simple: to be the go-to budget friendly event venue in Chattanooga.
                 </p>
-            </div><br><br>
+            </div><br>
+        </div>
 
 
-            <!-- STATS + CTA -->
-            <section class="bg-white px-4 sm:px-6 lg:px-10 overflow-hidden">
-                <div class="mx-auto">
 
-                    <!-- MOBILE AUTO SLIDER WRAPPER -->
-                    <div class="stats-mobile-wrapper">
 
-                        <div class="stats-mobile-track
-                        sm:grid sm:grid-cols-2 sm:gap-6
-                        lg:flex lg:flex-nowrap lg:items-center lg:gap-x-16">
 
-                            <!-- Members -->
-                            <div class="stats-item flex flex-col items-center min-w-[140px] lg:min-w-[140px]">
-                                <h3 class="count text-[#D53F52] text-3xl sm:text-3xl md:text-6xl font-semibold"
-                                    data-target="15">0</h3>
-                                <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
-                                    Members
-                                </p>
-                            </div>
 
-                            <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+        <div class="mx-auto overflow-hidden lg:overflow-visible">
 
-                            <!-- Events -->
-                            <div class="stats-item flex flex-col items-center min-w-[160px] lg:min-w-[180px]">
-                                <h3 class="count text-[#D53F52] text-3xl sm:text-3xl md:text-6xl font-semibold"
-                                    data-target="250">0+</h3>
-                                <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
-                                    Events Hosted
-                                </p>
-                            </div>
+            <!-- MOBILE SLIDER -->
+            <div class="lg:hidden">
+                <div class="flex gap-x-14 animate-marquee whitespace-nowrap">
 
-                            <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+                    <!-- 1 -->
+                    <div class="inline-block">
+                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="15">0</h3>
+                        <p class="text-[18px] font-medium">Members</p>
+                    </div>
 
-                            <!-- Guests -->
-                            <div class="stats-item flex flex-col items-center min-w-[180px] lg:min-w-[200px]">
-                                <h3 class="count text-[#D53F52] text-3xl sm:text-3xl md:text-6xl font-semibold"
-                                    data-target="32000">0+</h3>
-                                <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
-                                    Hosted Guest
-                                </p>
-                            </div>
+                    <!-- 2 -->
+                    <div class="inline-block">
+                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="250">0</h3>
+                        <p class="text-[18px] font-medium">Events Hosted</p>
+                    </div>
 
-                            <div class="hidden lg:block w-px h-20 bg-black/30"></div>
+                    <!-- 3 -->
+                    <div class="inline-block">
+                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="32000">0</h3>
+                        <p class="text-[18px] font-medium">Hosted Guest</p>
+                    </div>
 
-                            <!-- Collabs -->
-                            <div class="stats-item flex flex-col items-center min-w-[180px] lg:min-w-[200px]">
-                                <h3 class="count text-[#D53F52] text-3xl sm:text-3xl md:text-6xl font-semibold"
-                                    data-target="150">0+</h3>
-                                <p class="text-sm sm:text-base md:text-3xl font-medium mt-1 md:mt-2">
-                                    Expert Collabs
-                                </p>
-                            </div>
+                    <!-- 4 -->
+                    <div class="inline-block">
+                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="150">0</h3>
+                        <p class="text-[18px] font-medium">Expert Collabs</p>
+                    </div>
 
-                            <!-- CTA -->
-                            <!-- hidden on MOBILE + hidden on 32-inch+ -->
-                            <div class="stats-item hidden sm:flex justify-center mt-4
-                            [@media(min-width:2560px)]:hidden">
-                                <a href="/pages/service.html" class="relative inline-flex items-center
-                              min-w-max
-                              pl-5 pr-14 py-3 sm:pl-6 sm:pr-16 sm:py-4
-                              bg-black text-white rounded-full
-                              text-sm font-medium
-                              transition-all duration-300 hover:bg-black/90">
+                    <!-- duplicate for smooth loop -->
+                    <div class="inline-block">
+                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="15">15</h3>
+                        <p class="text-[18px] font-medium">Members</p>
+                    </div>
 
-                                    <span>Our Services</span>
-
-                                    <span class="absolute right-2 top-1/2 -translate-y-1/2
-                                     w-8 h-8 sm:w-9 sm:h-9
-                                     rounded-full bg-white
-                                     flex items-center justify-center">
-                                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-black"></i>
-                                    </span>
-                                </a>
-                            </div>
-
-                        </div>
+                    <div class="inline-block">
+                        <h3 class="count text-[34px] font-semibold text-[#D53F52]" data-target="250">250</h3>
+                        <p class="text-[18px] font-medium">Events Hosted</p>
                     </div>
 
                 </div>
-            </section>
+            </div>
+
+            <!-- DESKTOP / TABLET -->
+            <div class="hidden lg:flex flex-wrap lg:flex-nowrap items-center gap-x-14">
+
+                <div>
+                    <h3 class="count text-[44px] font-semibold text-[#D53F52]" data-target="15">0</h3>
+                    <p class="text-[22px] font-medium">Members</p>
+                </div>
+
+                <div class="hidden lg:block w-px h-16 bg-black/40"></div>
+
+                <div>
+                    <h3 class="count text-[44px] font-semibold text-[#D53F52]" data-target="250">0</h3>
+                    <p class="text-[22px] font-medium">Events Hosted</p>
+                </div>
+
+                <div class="hidden lg:block w-px h-16 bg-black/40"></div>
+
+                <div>
+                    <h3 class="count text-[44px] font-semibold text-[#D53F52]" data-target="32000">0</h3>
+                    <p class="text-[22px] font-medium">Hosted Guest</p>
+                </div>
+
+                <div class="hidden lg:block w-px h-16 bg-black/40"></div>
+
+                <div>
+                    <h3 class="count text-[44px] font-semibold text-[#D53F52]" data-target="150">0</h3>
+                    <p class="text-[22px] font-medium">Expert Collabs</p>
+                </div>
+
+                <!-- BUTTON (desktop only) -->
+                <div class="ml-6 hidden lg:flex">
+                    <a href="/pages/service.html" class="relative inline-flex items-center
+                pl-6 pr-16 py-4
+                bg-black text-white rounded-full
+                transition-all duration-300 hover:bg-black/90">
+
+                        <span class="text-sm font-medium">Our Services</span>
+
+                        <span class="absolute right-2 top-1/2 -translate-y-1/2
+                w-9 h-9 rounded-full bg-white
+                flex items-center justify-center">
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-black"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
+
+
+
+
+
     </section>
 
 
+    <!-- ================= STATS BAR ================= -->
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const counters = document.querySelectorAll(".count");
-            const isMobile = window.innerWidth < 640;
+        const counters = document.querySelectorAll(".count");
 
-            counters.forEach(counter => {
-                const target = +counter.dataset.target;
-                const hasPlus = counter.textContent.includes("+");
+        counters.forEach(counter => {
+            const target = +counter.dataset.target;
+            let current = 0;
 
-                // ✅ MOBILE → NO ANIMATION
-                if (isMobile) {
-                    counter.textContent =
-                        target.toLocaleString() + (hasPlus ? "+" : "");
-                    return;
+            const update = () => {
+                current += Math.ceil(target / 50);
+                if (current < target) {
+                    counter.innerText = current.toLocaleString();
+                    requestAnimationFrame(update);
+                } else {
+                    counter.innerText = target.toLocaleString() + "+";
                 }
+            };
 
-                // ✅ TABLET & DESKTOP → ANIMATE
-                let current = 0;
-                const step = Math.max(1, Math.floor(target / 90));
-
-                const update = () => {
-                    current += step;
-                    if (current >= target) {
-                        counter.textContent =
-                            target.toLocaleString() + (hasPlus ? "+" : "");
-                    } else {
-                        counter.textContent =
-                            current.toLocaleString() + (hasPlus ? "+" : "");
-                        requestAnimationFrame(update);
-                    }
-                };
-
-                // animate when visible
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            update();
-                            observer.disconnect();
-                        }
-                    });
-                }, { threshold: 0.4 });
-
-                observer.observe(counter);
-            });
+            update();
         });
     </script>
+
+
+
+
 
 
 
@@ -385,11 +384,21 @@
 
                 <!-- LEFT : NAV LINKS -->
                 <nav class="flex flex-wrap items-center gap-6 text-sm text-gray-700">
-                    <a href="/index.html" class="hover:text-black transition">Home</a>
-                    <a href="/pages/about.html" class="hover:text-black transition">About</a>
-                    <a href="/pages/service.html" class="hover:text-black transition">Service</a>
-                    <a href="/pages/gallery.html" class="hover:text-black transition">Gallery</a>
-                    <a href="/pages/contact.html" class="hover:text-black transition">Contact</a>
+                    <a href="/index.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Home </p>
+                    </a>
+                    <a href="/pages/about.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> About </p>
+                    </a>
+                    <a href="/pages/service.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700">Service </p>
+                    </a>
+                    <a href="/pages/gallery.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Gallery </p>
+                    </a>
+                    <a href="/pages/contact.html" class="hover:text-black transition">
+                        <p class="text-sm text-gray-700"> Contact </p>
+                    </a>
                 </nav>
 
                 <!-- RIGHT : COPYRIGHT -->

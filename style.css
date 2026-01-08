@@ -543,3 +543,20 @@ p {
         order: 3;
     }
 }
+
+
+
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 10s linear infinite;
+}
