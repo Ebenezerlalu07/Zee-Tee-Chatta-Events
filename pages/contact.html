@@ -22,7 +22,7 @@
     <!-- ================= NAVBAR ================= -->
     <header class="fixed top-0 left-0 w-full z-50 bg-white">
         <div class="relative px-4 sm:px-6 lg:px-10
- py-4 flex items-center justify-between">
+ py-3 flex items-center justify-between">
 
             <!-- LEFT : LOGO -->
             <div class="flex items-center gap-3">
@@ -252,12 +252,11 @@
     </section>
     <br>
 
-    <!-- SUCCESS POPUP -->
     <div id="successPopup" class="fixed top-6 left-1/2 z-50 hidden" style="transform: translateX(-50%);">
 
-        <div class="flex items-center gap-3 bg-green-600/95 text-white px-6 py-3 rounded-full shadow-lg backdrop-blur">
+        <div id="toastBox" class="flex items-center gap-3 bg-green-600/95 text-white
+                px-6 py-3 rounded-full shadow-lg backdrop-blur">
 
-            <!-- Tick Icon -->
             <div class="flex items-center justify-center w-8 h-8 rounded-full bg-white/25">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="3">
@@ -269,13 +268,11 @@
         </div>
     </div>
 
-
-
     <style>
-        @keyframes popupFade {
+        @keyframes toastIn {
             from {
                 opacity: 0;
-                transform: translateY(-10px);
+                transform: translateY(-14px);
             }
 
             to {
@@ -284,25 +281,31 @@
             }
         }
 
-        @keyframes popupOut {
+        @keyframes toastOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
             to {
                 opacity: 0;
-                transform: translateY(-10px);
+                transform: translateY(-14px);
             }
         }
 
-        .animate-popup {
-            animation: popupFade 0.35s ease-out forwards;
+        .toast-show {
+            animation: toastIn 0.35s ease-out forwards;
         }
 
-        .animate-popup-out {
-            animation: popupOut 0.25s ease-in forwards;
+        .toast-hide {
+            animation: toastOut 0.30s ease-in forwards;
         }
     </style>
 
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+
             const form = document.getElementById("contactForm");
             const popup = document.getElementById("successPopup");
 
